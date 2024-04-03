@@ -29,29 +29,52 @@
             width: 100%;
         }
 
-        nav {
-            background-color: #34495e;
-            border-radius: 8px;
-            margin: 20px auto 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 80%;
-            max-width: 800px;
-        }
+       /* Estilos CSS van aquí */
+nav {
+    background-color: #34495e;
+    border-radius: 8px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between; /* Cambiado a space-between */
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
+.nav-links {
+    display: flex; /* Agregado */
+    justify-content: space-between; /* Agregado */
+    width: 70%; /* Cambiado */
+}
 
-        nav a:hover {
-            background-color: #1abc9c;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+}
+
+/* Agregado */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Agregado */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
 
         main {
             text-align: center;
@@ -86,22 +109,35 @@
             text-align: center;
             width: 100%;
         }
+
+
+
     </style>
 </head>
 
 <body>
 
     <header>
+      <nav>
+    <a href="index.html">
         <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
-    </header>
-
-    <nav>
+    </a>
+    <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="música.html">Musica</a>
+        <a href="musica.html">Musica</a>
         <a href="tienda.html">Tienda</a>
-        <a href="Juegos.html">Juegos</a>
-        <a href="#">Otros</a>
-    </nav>
+        <a href="juegos.html">Juegos</a>
+        <a href="otros.html">Otros</a>
+    </div>
+    <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav>
+</header>
+
+
 
     <main>
         <h1>Bienvenido a AstraBazaar</h1>
@@ -112,6 +148,21 @@
     <footer>
         <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+a {
+    cursor: pointer;
+}
+
+
+    </script>
 
 </body>
 

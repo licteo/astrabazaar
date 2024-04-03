@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrabazaar - Juegos</title>
+    <title>Contacto - Astrabazaar</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Estilos CSS van aquí */
@@ -34,7 +34,7 @@
             border-radius: 8px;
             margin: 20px auto 0;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             width: 80%;
             max-width: 800px;
@@ -60,41 +60,29 @@
             max-width: 800px;
         }
 
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .game-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        form {
             margin-top: 20px;
         }
 
-        .game-item {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .game-item h2 {
-            font-size: 20px;
-            color: #333;
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
 
-        .game-item p {
-            font-size: 16px;
-            color: #666;
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1abc9c;
         }
 
         footer {
@@ -103,10 +91,10 @@
             padding: 20px;
             text-align: center;
             width: 100%;
+            margin-top: auto; /* Alinea el pie de página al fondo */
         }
     </style>
 </head>
-
 <body>
 
    <header>

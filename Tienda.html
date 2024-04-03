@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrabazaar - Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS van aquí */
+        body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #34495e;
+            border-radius: 8px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="musica.html">Música</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="Juegos.html">Juegos</a>
+        <a href="#">Otros</a>
+    </nav>
+
+    <main>
+        <h1>Explora nuestra tienda</h1>
+        <p>Descubre una amplia selección de productos disponibles.</p>
+        <div class="product-list">
+            <div class="product-item">
+                <h2>Producto 1</h2>
+                <p>Descripción del producto 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product-item">
+                <h2>Producto 2</h2>
+                <p>Descripción del producto 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product-item">
+                <h2>Producto 3</h2>
+                <p>Descripción del producto 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product-item">
+                <h2>Producto 4</h2>
+                <p>Descripción del producto 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <!-- Agrega más elementos según sea necesario -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

@@ -93,11 +93,104 @@
             width: 100%;
             margin-top: auto; /* Alinea el pie de página al fondo */
         }
+
+
+
+
+
+
+
+
+
+
+.background-link {
+            display: block;
+            width: 300px; /* Ancho deseado para tu enlace */
+            height: 200px; /* Altura deseada para tu enlace */
+            background-image: url('ruta/de/la/imagen.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+            background-position: center; /* Centra la imagen de fondo */
+            text-decoration: none; /* Quita el subrayado del enlace */
+            color: #fff; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente del texto */
+            text-align: center; /* Alinea el texto al centro */
+            line-height: 200px; /* Centra verticalmente el texto */
+            border-radius: 10px; /* Añade bordes redondeados */
+        }
+
+        .background-link:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo al pasar el ratón */
+        }
+
+
+
+
+
+
+.swimwear-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas con ancho flexible */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.swimwear-item {
+    background-color: #f9f9f9; /* Color de fondo de cada elemento */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.swimwear-item img {
+    max-width: 100%; /* Imágenes con ancho máximo del contenedor */
+}
+
+
+
+
+
+
+
+
+
+
+
+ body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Botón de WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
     </style>
 </head>
 <body>
 
-   <header>
+ <header>
        <nav>
     <a href="index.html">
         <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
@@ -119,33 +212,107 @@
 </header>
 
 
-    <main>
-        <h1>Explora nuestra tienda</h1>
-        <p>Descubre una amplia selección de productos disponibles.</p>
-        <div class="product-list">
-            <div class="product-item">
-                <h2>Producto 1</h2>
-                <p>Descripción del producto 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="product-item">
-                <h2>Producto 2</h2>
-                <p>Descripción del producto 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="product-item">
-                <h2>Producto 3</h2>
-                <p>Descripción del producto 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="product-item">
-                <h2>Producto 4</h2>
-                <p>Descripción del producto 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <!-- Agrega más elementos según sea necesario -->
+   <main>
+    <h1>Explora nuestra colección de trajes de baño</h1>
+    <p>Descubre una amplia variedad de trajes de baño para todos los gustos y estilos.</p>
+
+    <!-- Lista de trajes de baño -->
+    <div class="swimwear-grid">
+        <!-- Traje de baño 1 -->
+        <div class="swimwear-item">
+            <h2>Trajes de baño </h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 1">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </main>
+
+        <!-- Traje de baño 2 -->
+        <div class="swimwear-item">
+            <h2>vestidos</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 2">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Traje de baño 3 -->
+        <div class="swimwear-item">
+            <h2>blusas</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 3">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Traje de baño 4 -->
+        <div class="swimwear-item">
+            <h2>Traje de baño 4</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 4">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+
+
+<!-- Traje de baño 1 -->
+        <div class="swimwear-item">
+            <h2>Trajes de baño </h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 1">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Blusas -->
+        <div class="swimwear-item">
+            <h2>Traje de baño 2</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 2">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- vestidos-->
+        <div class="swimwear-item">
+            <h2>Traje de baño 3</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 3">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Traje de baño 4 -->
+        <div class="swimwear-item">
+            <h2>Traje de baño 4</h2>
+            <img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Traje de baño 4">
+            <p>Precio: $XX.XX</p>
+            <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+
+
+
+
+        <!-- Repite la estructura para más trajes de baño según sea necesario -->
+    </div>
+</main>
+
 
     <footer>
         <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
     </footer>
+
+     <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/+573213880467" class="whatsapp-button" target="_blank">¡Chatea con nosotros en WhatsApp!</a>
+    <!-- Reemplaza XXXXXXXXXX con el número de WhatsApp al que deseas dirigir el chat -->
+
+    <!-- Agrega jQuery (requerido por Slick Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Agrega la librería Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Inicializa el slider de trajes de baño
+        $(document).ready(function(){
+            $('.slider').slick();
+        });
+    </script>
+
+
 
 </body>
 

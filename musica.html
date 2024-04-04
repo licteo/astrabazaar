@@ -1,6 +1,15 @@
+<!----------------------------inicio de pagina web------------------------------->
 <!DOCTYPE html>
 <html lang="es">
 
+
+
+
+
+
+
+
+<!----------------------------inicio de head------------------------------->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,15 +102,75 @@
             width: 100%;
             margin-top: auto; /* Alinea el pie de página al fondo */
         }
+
+
+
+.music-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .music-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .music-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .music-item h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .music-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .radio-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .radio-list img {
+            max-width: 30%;
+        }
     </style>
 </head>
+<!----------------------------fin de head------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------inicio de cuerpo------------------------------->
 <body>
 
-    <header>
+
+<!----------------------------inicio de header------------------------------->
+   <header>
        <nav>
     <a href="index.html">
         <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
     </a>
+
     <div class="nav-links">
         <a href="contacto.html">contacto</a>
         <a href="musica.html">Musica</a>
@@ -117,36 +186,72 @@
 </nav>
 
 </header>
+<!----------------------------fin de header------------------------------->
 
 
-    <main>
-        <h1>Descubre nueva música</h1>
-        <p>Explora nuestra selección de canciones y artistas destacados.</p>
+
+
+<!----------------------------inicio de contenido------------------------------->
+     <main>
+        <h1>Explora nuestra música</h1>
+        <p>Descubre una amplia variedad de canciones, artistas y emisoras de música para todos los gustos.</p>
+
+        <!-- Lista de Contenido Musical -->
         <div class="music-list">
+            <!-- Sección de emisoras de música -->
             <div class="music-item">
-                <h2>Canción 1</h2>
-                <p>Descripción de la canción 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>Emisoras de música</h2>
+                <a href="https://radios.com.co/"><img src="https://i.postimg.cc/VL2s6Mdh/Emisoras.png" alt="Emisoras internacionales"></a>
+                <a href="https://instant.audio/"><img src="https://i.postimg.cc/v8CfGTwZ/otras-emisoras.png" alt="Otras emisoras"></a>
             </div>
+
+  <!-- Creadores de música -->
             <div class="music-item">
-                <h2>Canción 2</h2>
-                <p>Descripción de la canción 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>Creadores de música</h2>
+                <a href="https://www.bandlab.com/studio"><img src="https://i.postimg.cc/VNyNfn2L/bandlab.png" alt="Emisoras internacionales"></a>
+             
             </div>
+
+            <!-- Sección de videos de música -->
             <div class="music-item">
-                <h2>Canción 3</h2>
-                <p>Descripción de la canción 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>Videos de música</h2>
+                <a href="https://www.youtube.com/playlist?list=PLGXarP4-gkbaSqamSqVHlyA7L-hzo38wb"><img src="https://i.postimg.cc/JnbZrTGx/musica-videos-youtube.png" alt="Videos de música en YouTube"></a>
             </div>
+
+            <!-- Sección de recursos educativos de música -->
             <div class="music-item">
-                <h2>Canción 4</h2>
-                <p>Descripción de la canción 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>Recursos educativos de música</h2>
+                <a href="https://www.goconqr.com/es-ES/mindmap/25287642/Elementos-de-la-M-sica"><img src="https://www.mariajesusmusica.com/uploads/1/2/6/7/12672556/captura-de-pantalla-2020-10-06-a-las-15-14-02_orig.png" alt="Mapa mental de elementos de la música"></a>
+                <!-- Agrega más elementos según sea necesario -->
+                <a href="https://www.musicca.com/es/generador-de-acordes"><img src="https://i.postimg.cc/t4CKFwb1/generador-de-acordes.png" alt="Generador de acordes"></a>
+                <!-- Agrega más elementos según sea necesario -->
             </div>
-            <!-- Agrega más elementos según sea necesario -->
         </div>
     </main>
+<!----------------------------fin de contenido------------------------------->
 
+
+
+
+
+
+
+
+
+
+<!----------------------------inicio de pie de pagina------------------------------->
     <footer>
         <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
     </footer>
+<!----------------------------fin de pie de pagina------------------------------->
+
+
+
 
 </body>
+<!----------------------------fin de cuerpo------------------------------->
+
+
 
 </html>
+<!----------------------------fin de pagina web------------------------------->

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Astrabazaar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS van aquí */
+        body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #34495e;
+            border-radius: 8px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1abc9c;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto; /* Alinea el pie de página al fondo */
+        }
+
+        .background-link {
+            display: block;
+            width: 300px; /* Ancho deseado para tu enlace */
+            height: 200px; /* Altura deseada para tu enlace */
+            background-image: url('https://media.istockphoto.com/id/1490621500/es/foto/mano-sosteniendo-un-papel-blanco-con-signo-de-interrogaci%C3%B3n-sobre-un-fondo-azul-en-el-estudio.webp?b=1&s=170667a&w=0&k=20&c=Hp5VpqoBsyz9Px0s6JCmxiczAxdfqZsgf5BvnbPvmSA='); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+            background-position: center; /* Centra la imagen de fondo */
+            text-decoration: none; /* Quita el subrayado del enlace */
+            color: #fff; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente del texto */
+            text-align: center; /* Alinea el texto al centro */
+            line-height: 200px; /* Centra verticalmente el texto */
+            border-radius: 10px; /* Añade bordes redondeados */
+        }
+
+        .background-link:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo al pasar el ratón */
+        }
+
+        .swimwear-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas con ancho flexible */
+            gap: 20px; /* Espacio entre elementos */
+        }
+
+        .swimwear-item {
+            background-color: #f9f9f9; /* Color de fondo de cada elemento */
+            padding: 20px; /* Espacio interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        .swimwear-item img {
+            max-width: 100%; /* Imágenes con ancho máximo del contenedor */
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+            </a>
+            <div class="nav-links">
+                <a href="preguntas.html">preguntas</a>
+                <a href="musica.html">Musica</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="juegos.html">Juegos</a>
+                <a href="otros.html">Otros</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Preguntas Frecuentes</h1>
+
+        <!-- Pregunta 1: Métodos de Pago -->
+        <div class="swimwear-item">
+            <h2>Métodos de Pago</h2>
+            <img src="https://plus.unsplash.com/premium_photo-1661270407419-5ea7b129a42c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1ldG9kb3MlMjBkZSUyMHBhZ298ZW58MHx8MHx8fDA%3D" alt="Métodos de Pago">
+            <p>Tenemos la opción de pago contra entrega para todas nuestras ciudades con cobertura activa. Adicional a ello, para las siguientes ciudades tenemos habilitado el pago con datáfono y por Nequi: Bogotá, Cali, Medellín, Barranquilla, Cartagena, Pereira, Bucaramanga, Cúcuta, Neiva y Santa Marta, Sin embargo, ten presente que dependemos de la transportadora. También manejamos el método de pago con el crédito Addi.</p>
+        </div>
+
+        <!-- Pregunta 2: Tiempo de Entrega -->
+        <div class="swimwear-item">
+            <h2>Tiempo de Entrega</h2>
+            <img src="https://plus.unsplash.com/premium_photo-1661398816676-61495d2b1e61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGllbXBvJTIwZGUlMjBlbnRyZWdhfGVufDB8fDB8fHww" alt="Tiempo de Entrega">
+            <p>¿Cuanto es el tiempo de entrega de los productos?
+                Es importante que tengas en cuenta que los proveedores tienen 2 días hábiles para despachar los pedidos. Días hábiles: lunes a viernes (no cuentan los fines de semana ni festivos). Entrega del operador logístico: 👇 luego que Servientrega tiene el producto, es de: 3 a 5 días hábiles (lunes a viernes) en la ciudad de Bogotá. 7 a 10 días hábiles (lunes a viernes) en el resto de Colombia. Estos tiempos son estimados, puede que el paquete llegue el día 2 como puede que llegue el día 10. Recuerda que días hábiles son sin contar sábados, domingos, ni festivos.
+            </p>
+        </div>
+
+        <!-- Pregunta 3: Envíos -->
+        <div class="swimwear-item">
+            <h2>Envíos</h2>
+            <img src="https://plus.unsplash.com/premium_photo-1681487855134-d6c0434f91f8?dpr=1&w=306&auto=format&fit=crop&q=60&crop=entropy&cs=tinysrgb&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fGVudiVDMyVBRG8lMjBncmF0aXN8ZXN8MHwwfDB8fHwxNzE1NDA5NjY4fDE&ixlib=rb-4.0.3" alt="Envíos">
+            <p>¿Los envíos de los productos se pueden enviar a toda Colombia? Hay un listado de ciudades dependiendo el departamento para el envío. las ciudades que cuentan con pago contra entrega y las oficinas en las que se puede recoger los paquetes.</p>
+        </div>
+
+        <!-- Pregunta 4: Costo del Envío -->
+        <div class="swimwear-item">
+            <h2>Costo del Envío</h2>
+            <img src="https://plus.unsplash.com/premium_photo-1661719291384-a87e9bf9eb75?dpr=1&w=306&auto=format&fit=crop&q=60&crop=entropy&cs=tinysrgb&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8OHx8ZW52JUMzJUFEbyUyMGdyYXRpc3xlc3wwfDB8fHwxNzE1NDA5NjY4fDE&ixlib=rb-4.0.3" alt="Costo del Envío">
+            <p>¿Cuál es el costo del envío?
+                El costo del flete de envío oscila entre $7.500 a $21.000, dependiendo de la zona del país a dónde vaya. Este valor se suma en el total de la orden una vez esté terminando el proceso de compra, Es posible rectificar en el resumen de la compra antes de proceder al pago.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/+573005165566" class="whatsapp-button" target="_blank">¡Chatea con nosotros en WhatsApp!</a>
+    <!-- Reemplaza XXXXXXXXXX con el número de WhatsApp al que deseas dirigir el chat -->
+
+    <!-- Agrega jQuery (requerido por Slick Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Agrega la librería Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Inicializa el slider de productos
+        $(document).ready(function() {
+            $('.slider').slick();
+        });
+    </script>
+
+</body>
+
+</html>

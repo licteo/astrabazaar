@@ -1,197 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Astrabazaar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chatbot</title>
     <style>
-        /* Estilos CSS van aquí */
         body {
-            font-size: 16px;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            background-color: #f4f4f4;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
             padding: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        nav {
-            background-color: #34495e;
+            background: #fff;
             border-radius: 8px;
-            margin: 20px auto 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #1abc9c;
-        }
-
-        main {
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            max-width: 800px;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
+        .chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
             padding: 10px;
             margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
+            background: #f9f9f9;
         }
-
-        input[type="submit"] {
-            background-color: #333;
-            color: #fff;
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        .bot {
+            background: #e1ffc7;
+            align-self: flex-start;
+        }
+        .user {
+            background: #d1e7ff;
+            align-self: flex-end;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .input-container button {
+            padding: 10px 20px;
             border: none;
+            background: #5cb85c;
+            color: white;
+            border-radius: 8px;
             cursor: pointer;
         }
-
-        input[type="submit"]:hover {
-            background-color: #1abc9c;
+        .input-container button:hover {
+            background: #4cae4c;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            margin-top: auto; /* Alinea el pie de página al fondo */
-        }
-
-
-
-.whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .whatsapp-button:hover {
-            background-color: #128c7e;
-        }
-
     </style>
 </head>
 <body>
-
-    <header>
-      <nav>
-    <a href="index.html">
-        <img src="https://i.postimg.cc/Sn0SNPTH/logo.png" alt="Logo de AstraBazaar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
-    </a>
-    <div class="nav-links">
-        <a href="preguntas.html">preguntas</a>
-        <a href="musica.html">Musica</a>
-        <a href="https://tutienda.portafolio.digital/shop/297c420d-3065-499a-8e1c-ba31b9f70839x0fgx">Tienda</a>
-        <a href="construccion.html">Juegos</a>
-        <a href="construccion.html">Otros</a>
-    </div>
-    <div class="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-</nav>
-</header>
-
-
-
-
-<main>
-
- <!---- -------Lista de Contenido Musical 1----------------------------->
-
-        <div class="music-list">
-            <div class="music-item">
-   <h1>Bienvenido a AstraBazaar</h1>
- <p>Explora nuestra plataforma para descubrir música, productos, juegos y más.</p>
-              
-                
-        <iframe src="https://www.youtube.com/embed/Bvnc7fcuUbs?autoplay=1&mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-            </div>
-            <!-- Agrega más elementos según sea necesario -->
+    <div class="container">
+        <h1>Chatbot</h1>
+        <div class="chatbox" id="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="message" placeholder="Escribe tu mensaje" onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Enviar</button>
         </div>
-
-
-    
-     
-       
-
-    </main>
-
-
-
-
-
-
-
-    <footer>
-        <p>&copy; 2024 Astrabazaar - Todos los derechos reservados</p>
-    </footer>
-
-  <!-- Botón de WhatsApp -->
-    <a href="https://wa.me/+573005165566" class="whatsapp-button" target="_blank">¡Chatea con nosotros en WhatsApp!</a>
-    <!-- Reemplaza XXXXXXXXXX con el número de WhatsApp al que deseas dirigir el chat -->
-
-    <!-- Fin del contenido de la página -->
-
-    <!-- Agrega jQuery (requerido por Slick Carousel) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Agrega la librería Slick Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    </div>
     <script>
-        // Inicializa el slider de trajes de baño
-        $(document).ready(function(){
-            $('.slider').slick();
-        });
+        async function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value;
+            if (message.trim() === '') return;
+            appendMessage('user', message);
+            messageInput.value = '';
+
+            const response = await fetch('/chatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            appendMessage('bot', data.response);
+        }
+
+        function appendMessage(sender, message) {
+            const chatbox = document.getElementById('chatbox');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender);
+            messageElement.textContent = message;
+            chatbox.appendChild(messageElement);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
     </script>
-
 </body>
-
 </html>
-

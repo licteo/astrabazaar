@@ -1,345 +1,102 @@
-<html><head><base href="https://websim.ai/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Local HTML Files Gallery</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px 0;
-    }
-    .card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-        position: relative;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    .card-thumbnail {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .html-icon {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f0f0f0;
-        font-size: 48px;
-        color: #333;
-    }
-    .card-info {
-        padding: 15px;
-    }
-    .card-info h3 {
-        margin: 0 0 10px 0;
-        color: #333;
-    }
-    .card-info p {
-        margin: 0;
-        color: #666;
-        font-size: 14px;
-    }
-    .add-item {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 20px 0;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    form input, form textarea {
-        margin-bottom: 10px;
-        padding: 5px;
-    }
-    form button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-    #preview {
-        max-width: 100%;
-        max-height: 200px;
-        margin-bottom: 10px;
-        display: none;
-    }
-    .delete-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #ff4136;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    .card:hover .delete-btn {
-        opacity: 1;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        .bot {
+            background: #e1ffc7;
+            align-self: flex-start;
+        }
+        .user {
+            background: #d1e7ff;
+            align-self: flex-end;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .input-container button {
+            padding: 10px 20px;
+            border: none;
+            background: #5cb85c;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .input-container button:hover {
+            background: #4cae4c;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Local HTML Files Gallery</h1>
-        <button class="add-item" onclick="openModal()">Add New HTML File</button>
-        <div class="gallery" id="gallery">
-            <!-- Cards will be dynamically added here -->
+        <h1>Chatbot</h1>
+        <div class="chatbox" id="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="message" placeholder="Escribe tu mensaje" onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Enviar</button>
         </div>
     </div>
+    <script>
+        async function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value;
+            if (message.trim() === '') return;
+            appendMessage('user', message);
+            messageInput.value = '';
 
-    <div id="addItemModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Add New HTML File</h2>
-            <form id="addItemForm">
-                <input type="text" id="itemTitle" placeholder="Title" required>
-                <input type="file" id="fileInput" accept=".html" required>
-                <input type="file" id="thumbnailInput" accept="image/*">
-                <textarea id="itemDescription" placeholder="Description" required></textarea>
-                <img id="preview" alt="Thumbnail Preview">
-                <button type="submit">Add HTML File</button>
-            </form>
-        </div>
-    </div>
-
-<script>
-    let items = [];
-
-    function loadItems() {
-        const savedItems = localStorage.getItem('htmlGalleryItems');
-        if (savedItems) {
-            items = JSON.parse(savedItems);
-            renderGallery();
-        }
-    }
-
-    function saveItems() {
-        localStorage.setItem('htmlGalleryItems', JSON.stringify(items));
-    }
-
-    function renderGallery() {
-        const gallery = document.getElementById('gallery');
-        gallery.innerHTML = '';
-        items.forEach((item, index) => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            if (item.thumbnail) {
-                card.innerHTML = `
-                    <img class="card-thumbnail" src="${item.thumbnail}" alt="${item.title}">
-                    <div class="card-info">
-                        <h3>${item.title}</h3>
-                        <p>${item.description}</p>
-                    </div>
-                    <button class="delete-btn" onclick="deleteItem(event, ${index})">×</button>
-                `;
-            } else {
-                card.innerHTML = `
-                    <div class="html-icon">HTML</div>
-                    <div class="card-info">
-                        <h3>${item.title}</h3>
-                        <p>${item.description}</p>
-                    </div>
-                    <button class="delete-btn" onclick="deleteItem(event, ${index})">×</button>
-                `;
-            }
-            card.addEventListener('click', () => openItem(index));
-            gallery.appendChild(card);
-        });
-    }
-
-    function deleteItem(event, index) {
-        event.stopPropagation();  // Prevent opening the file when clicking delete
-        if (confirm('Are you sure you want to delete this HTML file?')) {
-            items.splice(index, 1);
-            saveItems();
-            renderGallery();
-        }
-    }
-
-    function openItem(index) {
-        const item = items[index];
-        openHTMLFile(item.path);
-    }
-
-    function openHTMLFile(path) {
-        const iframe = document.createElement('iframe');
-        iframe.src = path;
-        iframe.style.position = 'fixed';
-        iframe.style.top = '0';
-        iframe.style.left = '0';
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.border = 'none';
-        iframe.style.zIndex = '9999';
-
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Close';
-        closeButton.style.position = 'fixed';
-        closeButton.style.top = '10px';
-        closeButton.style.right = '10px';
-        closeButton.style.zIndex = '10000';
-        closeButton.onclick = () => {
-            document.body.removeChild(iframe);
-            document.body.removeChild(closeButton);
-        };
-
-        document.body.appendChild(iframe);
-        document.body.appendChild(closeButton);
-    }
-
-    function openModal() {
-        document.getElementById('addItemModal').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('addItemModal').style.display = 'none';
-        document.getElementById('addItemForm').reset();
-        document.getElementById('preview').style.display = 'none';
-    }
-
-    document.getElementById('thumbnailInput').addEventListener('change', function(e) {
-        const preview = document.getElementById('preview');
-        const file = e.target.files[0];
-
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            }
-            reader.readAsDataURL(file);
-        } else {
-            preview.style.display = 'none';
-        }
-    });
-
-    document.getElementById('addItemForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const title = document.getElementById('itemTitle').value;
-        const description = document.getElementById('itemDescription').value;
-        const file = document.getElementById('fileInput').files[0];
-        const thumbnailFile = document.getElementById('thumbnailInput').files[0];
-
-        if (!file) {
-            alert('Please select an HTML file.');
-            return;
+            const response = await fetch('/chatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            appendMessage('bot', data.response);
         }
 
-        const fileReader = new FileReader();
-        fileReader.onload = function(e) {
-            const fileContent = e.target.result;
-            
-            if (thumbnailFile) {
-                const thumbnailReader = new FileReader();
-                thumbnailReader.onload = function(e) {
-                    items.push({ 
-                        title, 
-                        path: fileContent, 
-                        description,
-                        thumbnail: e.target.result
-                    });
-                    saveItems();
-                    renderGallery();
-                    closeModal();
-                }
-                thumbnailReader.readAsDataURL(thumbnailFile);
-            } else {
-                items.push({ 
-                    title, 
-                    path: fileContent, 
-                    description 
-                });
-                saveItems();
-                renderGallery();
-                closeModal();
-            }
+        function appendMessage(sender, message) {
+            const chatbox = document.getElementById('chatbox');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender);
+            messageElement.textContent = message;
+            chatbox.appendChild(messageElement);
+            chatbox.scrollTop = chatbox.scrollHeight;
         }
-        fileReader.readAsDataURL(file);
-
-        this.reset();
-    });
-
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('addItemModal')) {
-            closeModal();
-        }
-    }
-
-    loadItems();
-    renderGallery();
-</script>
-
+    </script>
 </body>
 </html>

@@ -1,0 +1,200 @@
+body {
+    background: #22004a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.container {
+    margin-top: 40px;
+}
+.planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+.planet {
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s;
+}
+.planet:hover {
+    transform: scale(1.1);
+    color: #ffd700;
+}
+.planet img {
+    width: 100px;
+    height: 100px;
+}
+.creative-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.creative-card {
+    background: #2d0066;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.creative-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #ff9800;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.creative-card button:hover {
+    background: #ffa726;
+}
+.shop-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.shop-card {
+    background: #1a3a2d;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.shop-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #4caf50;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.shop-card button:hover {
+    background: #81c784;
+}
+.psico-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.psico-card {
+    background: #2e3a5a;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.psico-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #2196f3;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.psico-card button:hover {
+    background: #64b5f6;
+}
+.astra-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.astra-card {
+    background: #3a235a;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.astra-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #9c27b0;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.astra-card button:hover {
+    background: #ce93d8;
+}
+.tecno-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.tecno-card {
+    background: #1a237e;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.tecno-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #00bcd4;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.tecno-card button:hover {
+    background: #4dd0e1;
+}
+.alma-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.alma-card {
+    background: #156064;
+    border-radius: 12px;
+    padding: 24px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 2px 8px #0003;
+    text-align: center;
+}
+.alma-card button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #ffd600;
+    border: none;
+    border-radius: 6px;
+    color: #156064;
+    cursor: pointer;
+    font-weight: bold;
+}
+.alma-card button:hover {
+    background: #fff59d;
+    color: #156064;
+}

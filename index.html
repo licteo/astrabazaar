@@ -2,101 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .chatbox {
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-            background: #f9f9f9;
-        }
-        .message {
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-            max-width: 80%;
-        }
-        .bot {
-            background: #e1ffc7;
-            align-self: flex-start;
-        }
-        .user {
-            background: #d1e7ff;
-            align-self: flex-end;
-        }
-        .input-container {
-            display: flex;
-            align-items: center;
-        }
-        .input-container input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-right: 10px;
-        }
-        .input-container button {
-            padding: 10px 20px;
-            border: none;
-            background: #5cb85c;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .input-container button:hover {
-            background: #4cae4c;
-        }
-    </style>
+    <title>ASTRABAZAAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Chatbot</h1>
-        <div class="chatbox" id="chatbox"></div>
-        <div class="input-container">
-            <input type="text" id="message" placeholder="Escribe tu mensaje" onkeydown="if(event.key === 'Enter') sendMessage()">
-            <button onclick="sendMessage()">Enviar</button>
+        <h1>ASTRABAZAAR</h1>
+        <p>Explora. Conecta. Ilumina tu universo.</p>
+        <div class="planets">
+            <a class="planet" href="/orbita-creativa">
+                <img src="{{ url_for('static', filename='img/orbita.png') }}"><br>Órbita Creativa
+            </a>
+            <a class="planet" href="/nova-tienda">
+                <img src="{{ url_for('static', filename='img/nova.png') }}"><br>Nova-Tienda
+            </a>
+            <a class="planet" href="/psicoestacion">
+                <img src="{{ url_for('static', filename='img/psico.png') }}"><br>PsicoEstación
+            </a>
+            <a class="planet" href="/constelacion-astra">
+                <img src="{{ url_for('static', filename='img/constelacion.png') }}"><br>Constelación Astra
+            </a>
+            <a class="planet" href="/tecnonucleo">
+                <img src="{{ url_for('static', filename='img/tecnonucleo.png') }}"><br>TecnoNúcleo
+            </a>
+            <a class="planet" href="/almaceleste">
+                <img src="{{ url_for('static', filename='img/almaceleste.png') }}"><br>AlmaCeleste
+            </a>
         </div>
     </div>
-    <script>
-        async function sendMessage() {
-            const messageInput = document.getElementById('message');
-            const message = messageInput.value;
-            if (message.trim() === '') return;
-            appendMessage('user', message);
-            messageInput.value = '';
-
-            const response = await fetch('/chatbot', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: message })
-            });
-            const data = await response.json();
-            appendMessage('bot', data.response);
-        }
-
-        function appendMessage(sender, message) {
-            const chatbox = document.getElementById('chatbox');
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message', sender);
-            messageElement.textContent = message;
-            chatbox.appendChild(messageElement);
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-    </script>
 </body>
 </html>

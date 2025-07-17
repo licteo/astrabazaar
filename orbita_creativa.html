@@ -1,0 +1,31 @@
+<!-- orbita_creativa.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Órbita Creativa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Órbita Creativa</h1>
+    <p>¡Bienvenido a la zona de creatividad! Aquí encontrarás juegos, retos, arte digital, concursos y actividades para estimular tu imaginación.</p>
+    <div class="creative-section">
+        <div class="creative-card">
+            <h2>Juegos Interactivos</h2>
+            <p>Explora minijuegos para ejercitar tu mente y divertirte.</p>
+            <a href="/juegos"><button>Jugar ahora</button></a>
+        </div>
+        <div class="creative-card">
+            <h2>Retos Creativos</h2>
+            <p>Participa en desafíos semanales de dibujo, escritura o música.</p>
+            <a href="/retos"><button>Ver retos</button></a>
+        </div>
+        <div class="creative-card">
+            <h2>Galería de Arte</h2>
+            <p>Comparte tus obras y descubre el talento de otros usuarios.</p>
+            <a href="/galeria"><button>Ver galería</button></a>
+        </div>
+    </div>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>
